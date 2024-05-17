@@ -345,9 +345,8 @@ int alteraRegistro() {
       arv = delTree(arv, a); // Deleta da arvore
       printf("\nAlterar dados:\n");
       printf("Novo Nome: ");
-      scanf("%s[A-Z, a-z, "
-            "]",
-            a.nome);
+      while (fgets(a.nome, TAM_NOME, stdin) && !strcmp(a.nome, "\n"))
+        ;
       printf("Novo Endereço: ");
       scanf("%s[A-Z, a-z, 0-9, "
             "]",
